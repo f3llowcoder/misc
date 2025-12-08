@@ -1,0 +1,17 @@
+https://sparkmadeeasy.com/
+docker-compose.yml
+
+services:
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: jupyter
+    working_dir: /notebooks
+    ports:
+      - 8888:8888
+    volumes:
+      - ./data/:/data
+      - ./notebooks/:/notebooks
+
+
+quay.io/jupyter/pyspark-notebook
+
